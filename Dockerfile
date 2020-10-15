@@ -5,7 +5,7 @@ FROM java:7-jre-alpine
 MAINTAINER Panagiotis Moustafellos <pmoust@gmail.com>
 
 RUN apk add --no-cache git bash ca-certificates && \
-    git clone https://github.com/cobbzilla/s3s3mirror.git /opt/s3s3mirror && \
+    git clone -b 2.1-stable https://github.com/cobbzilla/s3s3mirror.git /opt/s3s3mirror && \
     apk del git && \
     rm -rf /opt/s3s3mirror/.git
 
